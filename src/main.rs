@@ -23,8 +23,8 @@ impl Philosopher {
 
         thread::sleep(Duration::from_millis(150));
 
-        println!("{} picked up a right fork.", self.name);
         let _right = table.forks[self.right].lock().unwrap();
+        println!("{} picked up a right fork.", self.name);
 
         println!("{} is eating.", self.name);
 
